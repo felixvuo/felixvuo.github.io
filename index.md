@@ -1,7 +1,16 @@
+# Felix Ulrich-Oltean
+
+Working on translating Constraint Satisfaction Problems into Boolean
+SAT problems with the help of machine learning to choose the best
+encoding.
+
+
 ## Get in touch
 
 E-mail me: fvuo500 at york dot ac dot uk
+
 Twitter: [FelixVuo](https://twitter.com/FelixVuo)
+
 Hire me: [LinkedIn](https://www.linkedin.com/in/felix-ulrich-oltean/)
 
 
