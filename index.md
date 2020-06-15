@@ -1,3 +1,5 @@
+<img width="116" height="121" src="fvuo-face.png" alt="Photo of my face" align="right" />
+
 # Felix Ulrich-Oltean
 
 Working on translating Constraint Satisfaction Problems into Boolean
