@@ -24,7 +24,9 @@ research topic.  I hope to share more details here soon.
 
 
 ## 2020, June, Eastern European Machine Learning Summer School
-I'm very pleased to be attending this summer school in July (shame it
+<img width="320" height="194" src="eeml2020-youtube-thumb.png"
+alt="Thumbnail photo from the presentation video" align="right" /> I'm
+very pleased to be attending this summer school in July (shame it
 couldn't be in the flesh in Warsaw).  As part of the application /
 registration process I prepared a short video presentation to
 summarise my research interest.  [Watch it
