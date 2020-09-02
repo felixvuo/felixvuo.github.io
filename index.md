@@ -14,9 +14,10 @@ encoding.
 
 ## 2020, July and September, CP2020 Doctoral Programme
 As part of the doctoral programme at the [CP2020 conference on
-Constraint Progamming](https://cp2020.a4cp.org/), I have submitted a
-short paper to describe my research so far and have taken part in
-peer-review with other PhD students, going through the EasyChair
+Constraint Progamming](https://cp2020.a4cp.org/), I have submitted [a
+short paper to describe my research so
+far](./papers/cp2020-docprog-research_summary.pdf) and have taken part
+in peer-review with other PhD students, going through the EasyChair
 platform to submit, review, discuss.
 
 At the conference I will give a 10-minute presentation about my
