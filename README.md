@@ -1,1 +1,1 @@
-My first literature review seminar coming soon.
+A home page for some of my PhD-related activity.
