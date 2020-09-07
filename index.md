@@ -13,26 +13,30 @@ encoding.
 
 
 ## 2020, July and September, CP2020 Doctoral Programme
-As part of the doctoral programme at the [CP2020 conference on
-Constraint Progamming](https://cp2020.a4cp.org/), I have submitted [a
-short paper to describe my research so
-far](./papers/cp2020-docprog-research_summary.pdf) and have taken part
-in peer-review with other PhD students, going through the EasyChair
+<a href="https://youtu.be/ZoMjX8tGEiA"><img
+src="papers/cp2020talkthumb.png" align="right" width="144" height="80"
+alt="Thumbnail from presentation video" /></a> As part of the doctoral
+programme at the [CP2020 conference on Constraint
+Progamming](https://cp2020.a4cp.org/), I submitted [a short paper to
+describe my research so
+far](./papers/cp2020-docprog-research_summary.pdf) and took part in
+peer-review with other PhD students, going through the EasyChair
 platform to submit, review, discuss.
 
-At the conference I will give a 10-minute presentation about my
-research topic.  I hope to share more details here soon.
+At the conference I gave a 10-minute presentation about my research
+topic.  You can access the [slides
+here](papers/cp2020-docprog-slides.pdf) and [watch the presentation
+here](https://youtu.be/ZoMjX8tGEiA).
 
 
 ## 2020, June, Eastern European Machine Learning Summer School
 <a href="https://youtu.be/SyihWz34KEw"><img width="144" height="87"
-src="eeml2020-youtube-thumb.png"
-alt="Thumbnail photo from the presentation video" align="right" /></a>
-I'm very pleased to be attending this summer school in July (shame it
-couldn't be in the flesh in Warsaw).  As part of the application /
-registration process I prepared a short video presentation to
-summarise my research interest.  [Watch it
-here](https://youtu.be/SyihWz34KEw)
+src="papers/eeml2020-youtube-thumb.png" alt="Thumbnail photo from the
+presentation video" align="right" /></a> I'm very pleased to be
+attending this summer school in July (shame it couldn't be in the
+flesh in Warsaw).  As part of the application / registration process I
+prepared a short video presentation to summarise my research interest.
+[Watch it here](https://youtu.be/SyihWz34KEw)
 
 
 ## 2020, January, AI Group Seminars
