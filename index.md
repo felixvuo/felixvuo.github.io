@@ -12,6 +12,15 @@ encoding.
 * Hire me: [LinkedIn](https://www.linkedin.com/in/felix-ulrich-oltean/)
 
 
+## 2021, October, CP2021 Doctoral Programme and ModRef Workshop
+I am presenting my work in two guises: as part of the doctoral
+programme and also to the ModRef2021 workshop.  You can get the slides
+and (pre)recording of the talks here:
+- ModRef talk: [slides](papers/slides-modref2021.pdf), [YouTube
+  recording](https://youtu.be/jWLN0H7FX_I)
+- Doc Prog : [slides](papers/slides-cp2021-dp.pdf), [YouTube
+  recording](https://youtu.be/tV576cKgt5w)
+
 ## 2020, July and September, CP2020 Doctoral Programme
 <a href="https://youtu.be/ZoMjX8tGEiA"><img
 src="papers/cp2020talkthumb.png" align="right" width="144" height="80"
