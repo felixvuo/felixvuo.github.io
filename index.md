@@ -21,6 +21,31 @@ and (pre)recording of the talks here:
 - Doc Prog : [slides](papers/slides-cp2021-dp.pdf), [YouTube
   recording](https://youtu.be/tV576cKgt5w)
 
+
+## 2021, September, Associate Fellow of the HEA
+<img src="img/thumb-heacert.png" align="right"/>After completing the
+[York Professional and Academic Development scheme
+(YPAD)](https://www.york.ac.uk/staff/teaching/develop/ypad/) and
+submitting a report of my teaching-related experience I was awarded
+Associate Fellowship of the Higher Education Academy.  As part of my
+report I carried out a brief investigation into using summative
+assessment results to inform teaching and assessment in the next
+cohort.  Per-question breakdown of the marks allows some rudimentary
+statistical analysis which can shed light on how questions coudl be
+improved or which concepts and skills might be particularly difficult
+for students.
+
+
+
+## 2021, June, GTA of the Year Award
+<a href="https://twitter.com/UoY_CS/status/1408441043838775301"><img
+src="img/thumb-gta-award.png" align="right"/></a> I was very honoured
+to receive this award after being a graduate teaching assistant,
+working particulary to help year 1 students with maths (after lockdown
+had deprived them of months of A-level maths), and also running some
+data science labs remotely.
+
+
 ## 2020, July and September, CP2020 Doctoral Programme
 <a href="https://youtu.be/ZoMjX8tGEiA"><img
 src="papers/cp2020talkthumb.png" align="right" width="144" height="80"
