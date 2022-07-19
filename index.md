@@ -11,9 +11,19 @@ formulae with the help of machine learning to choose the best encoding.
 * Hire me: [LinkedIn](https://www.linkedin.com/in/felix-ulrich-oltean/)
 
 
+## 2022, August, Presenting Paper at CP2022 in Haifa
+<a href="https://eprints.whiterose.ac.uk/186734/1/"><img
+src="img/thumb-cp2022.png" align="right" /></a>I was thrilled that our paper
+[Selecting SAT Encodings for Pseudo-Boolean and Linear Integer
+Constraints](https://eprints.whiterose.ac.uk/186734/1/) was accepted to CP2022.
+- Experimental data including constraint models and results are available at
+  https://github.com/felixvuo/cp2022-pbli-sat
+- Poster presented at the Doctoral Programme to come.
+
+
 ## 2021, October, CP2021 Doctoral Programme and ModRef Workshop
 <a href="https://www.youtube.com/channel/UC-SDDq-qAgeOcCRLVcO06Dw"><img
-src="img/thumb-modref.png" align="right"/></a> I am presenting my work in two
+src="img/thumb-modref.png" align="right" /></a> I am presenting my work in two
 guises: as part of the doctoral programme and also to the ModRef2021 workshop.
 You can get the slides and (pre)recording of the talks here:
 - ModRef talk: [slides](papers/slides-modref2021.pdf), [YouTube
