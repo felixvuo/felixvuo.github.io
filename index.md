@@ -18,7 +18,7 @@ src="img/thumb-cp2022.png" align="right" /></a>I was thrilled that our paper
 Constraints](https://eprints.whiterose.ac.uk/186734/1/) was accepted to CP2022.
 - Experimental data including constraint models and results are available at
   https://github.com/felixvuo/cp2022-pbli-sat
-- Poster presented at the Doctoral Programme to come.
+- [Poster](./papers/poster-cp2022-dp.pdf) presented at the Doctoral Programme.
 
 
 ## 2021, October, CP2021 Doctoral Programme and ModRef Workshop
