@@ -6,16 +6,34 @@ formulae with the help of machine learning to choose the best encoding.
 
 
 ## Get in touch
-* E-mail me: fvuo500 at york dot ac dot uk
+* E-mail me: felix.ulrich-oltean at york dot ac dot uk
 * Tweet me: [FelixVuo](https://twitter.com/FelixVuo)
 * Hire me: [LinkedIn](https://www.linkedin.com/in/felix-ulrich-oltean/)
 
+
+
+## 2023, October, Guest Lecture in AI Masters Course
+It was great to be back in front of a class, this time delivering a lecture on
+logic and inference to Masters students taking the FOAM (Foundations of
+Artificial Intelligence and Machine Learning) course at the University of York.
+
+## 2023, September, Thesis submitted
+<img src="img/thumb-thesis.png" alt="thesis front cover" align="right" /> What a
+relief to finally submit my PhD thesis after four eventful years.  I'm looking
+forward to picking up some of the research projects which were on hold while the
+write-up was completed.  And of course awaiting the viva!
+
+## 2022, September, Research Associate Position
+I have been hired by the University of York to work as a research associate with
+Peter Nightingale in the field of constraint programming, initially part-time as
+I finish working on my PhD.
 
 ## 2022, August, Presenting Paper at CP2022 in Haifa
 <a href="https://eprints.whiterose.ac.uk/186734/1/"><img
 src="img/thumb-cp2022.png" align="right" /></a>I was thrilled that our paper
 [Selecting SAT Encodings for Pseudo-Boolean and Linear Integer
-Constraints](https://eprints.whiterose.ac.uk/186734/1/) was accepted to CP2022.
+Constraints](https://eprints.whiterose.ac.uk/186734/1/) was accepted to CP2022,
+and even shortlisted for the best paper award.
 - Experimental data including constraint models and results are available at
   https://github.com/felixvuo/cp2022-pbli-sat
 - [Poster](./papers/poster-cp2022-dp.pdf) presented at the Doctoral Programme.
