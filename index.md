@@ -1,8 +1,7 @@
 <img width="116" height="121" src="fvuo-face.png" alt="Photo of my face" align="right" />
 
-# Felix Ulrich-Oltean
-Working on translating Constraint Satisfaction Problems into Boolean SAT
-formulae with the help of machine learning to choose the best encoding.
+Working on solving Constraint Satisfaction Problems with the help of Machine
+Learning techniques.
 
 
 ## Get in touch
