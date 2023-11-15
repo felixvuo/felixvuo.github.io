@@ -18,7 +18,8 @@ constraints](https://doi.org/10.1007/s10601-023-09364-1) has now been published
 in the Constraints journal.  This paper was an extended version of the work
 presented at CP2022, with more encodings, more analysis and the first detailed
 description of Savile Row's Tree SAT encoding.  The expanded results, models and
-code are now at https://github.com/felixvuo/lease-data
+code are now at
+[https://github.com/felixvuo/lease-data](https://github.com/felixvuo/lease-data)
 
 ## 2023, October, Guest Lecture in AI Masters Course
 It was great to be back in front of a class, this time delivering a lecture on
@@ -43,7 +44,7 @@ src="img/thumb-cp2022.png" align="right" /></a>I was thrilled that our paper
 Constraints](https://eprints.whiterose.ac.uk/186734/1/) was accepted to CP2022,
 and even shortlisted for the best paper award.
 - Experimental data including constraint models and results are available at
-  https://github.com/felixvuo/cp2022-pbli-sat
+  [https://github.com/felixvuo/cp2022-pbli-sat](https://github.com/felixvuo/cp2022-pbli-sat)
 - [Poster](./papers/poster-cp2022-dp.pdf) presented at the Doctoral Programme.
 
 
