@@ -10,13 +10,22 @@ Learning techniques.
 * Hire me: [LinkedIn](https://www.linkedin.com/in/felix-ulrich-oltean/)
 
 
+## 2023, November, First-author Journal Article Published
+<a href="https://doi.org/10.1007/s10601-023-09364-1"><img
+src="img/thumb-cons-jnl.png" align="right" /></a>Our paper [Learning to select
+SAT Encodings for pseudo-Boolean and linear integer
+constraints](https://doi.org/10.1007/s10601-023-09364-1) has now been published
+in the Constraints journal.  This paper was an extended version of the work
+presented at CP2022, with more encodings, more analysis and the first detailed
+description of Savile Row's Tree SAT encoding.  The expanded results, models and
+code are now at https://github.com/felixvuo/lease-data
 
 ## 2023, October, Guest Lecture in AI Masters Course
 It was great to be back in front of a class, this time delivering a lecture on
 logic and inference to Masters students taking the FOAM (Foundations of
 Artificial Intelligence and Machine Learning) course at the University of York.
 
-## 2023, September, Thesis submitted
+## 2023, September, Thesis Submitted
 <img src="img/thumb-thesis.png" alt="thesis front cover" align="right" /> What a
 relief to finally submit my PhD thesis after four eventful years.  I'm looking
 forward to picking up some of the research projects which were on hold while the
