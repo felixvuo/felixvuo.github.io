@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-25T08:46:40-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Felix Ulrich-Oltean</title><subtitle>AI Research &amp; Education</subtitle><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><entry><title type="html">PhD Graduation Ceremony</title><link href="http://localhost:4000/posts/2024/07/graduation/" rel="alternate" type="text/html" title="PhD Graduation Ceremony" /><published>2024-07-29T00:00:00-07:00</published><updated>2024-07-29T00:00:00-07:00</updated><id>http://localhost:4000/posts/2024/07/graduation</id><content type="html" xml:base="http://localhost:4000/posts/2024/07/graduation/"><![CDATA[<p><img src="/images/thumb-grad-gown.png" style="float:right;padding:1ex;" />It
+was a wonderful occasion to reflect on and celebrate the PhD experience with
+colleagues at a very special graduation ceremony organised by the University of
+York.  Having missed my original BSc graduation back in 2000, it was great to
+finally wear the gown and receive the award on stage.  I will always be grateful
+to all those people who made it possible for me to enage in these years of
+study, training and research.</p>
+
+<p>I’m thankful to the University of York alumni organisation, “York for Life”,
+which organised for a clip of the moment to be freely available to graduands.</p>
+
+<video controls="true" style="max-width:100%; margin: 0 auto;">
+  <source src="/images/grad-clip.mp4" type="video/mp4" />
+</video>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><summary type="html"><![CDATA[It was a wonderful occasion to reflect on and celebrate the PhD experience with colleagues at a very special graduation ceremony organised by the University of York. Having missed my original BSc graduation back in 2000, it was great to finally wear the gown and receive the award on stage. I will always be grateful to all those people who made it possible for me to enage in these years of study, training and research.]]></summary></entry><entry><title type="html">PhD Thesis Published</title><link href="http://localhost:4000/posts/2024/03/thesis-published/" rel="alternate" type="text/html" title="PhD Thesis Published" /><published>2024-03-22T00:00:00-07:00</published><updated>2024-03-22T00:00:00-07:00</updated><id>http://localhost:4000/posts/2024/03/thesis-published</id><content type="html" xml:base="http://localhost:4000/posts/2024/03/thesis-published/"><![CDATA[<p><img alt="front cover of PhD thesis" src="/images/thumb-thesis.png" style="float:right; padding:1ex;" />After minor corrections, my thesis
+dissertation was approved and is now live at the <a href="https://etheses.whiterose.ac.uk/34581/">White Rose E-theses
+Repository</a>.  This completes a very
+eventful, challenging and rewarding 5 years since stepping out of my career as a
+school teacher to pursue a long-held ambition to learn more and engage in
+cutting edge research.  I am very grateful to my supervisors for all their help
+and to my family for all their support.</p>
+
+<p>Here’s the abstract:</p>
+<blockquote>
+  <p>Constraint programming addresses many interesting and challenging problems in
+our world, including recent applications to contexts as diverse as allocating
+refugee relief funds, short-term mine planning and hardware circuit
+design. Users define their problems in high-level modelling languages which
+include descriptive global constraints. One of the most effective ways to solve
+constraint satisfaction problems (CSPs) is by translating them into instances of
+the Boolean Satisfiability Problem (SAT). For some global constraints in CSPs
+there exist many algorithms which encode the constraint into SAT; choosing an
+appropriate SAT encoding can alter the ultimate solving time dramatically. We
+investigate the problem of selecting the best SAT encoding for pseudo-Boolean
+and linear integer constraints. Many machine learning techniques are explored,
+applied and evaluated to aid this selection. The result is a significant
+improvement in performance compared to the default choice and to the single best
+choice from a training set. The approach is successful even for previously
+unseen problem classes and it greatly outperforms a sophisticated general
+algorithm selection and configuration tool. This work provides a thorough
+empirical study and detailed analysis of each stage in the machine learning
+process as applied to choosing SAT encodings. It does this in three phases:
+firstly by using generic CSP instance features to select an encoding per
+constraint type for each instance, then by introducing new features which focus
+on the constraint types in question, and finally by learning to select encodings
+for individual constraints. We find that even generic instance features can
+produce good predictions, but that the specialised features introduced give more
+robust performance especially when predicting for unseen problem
+classes. Training to predict per constraint shows potential and leads to better
+performance for some problem classes, but per-instance selection is still
+competitive across the corpus of problems as a whole.</p>
+</blockquote>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><category term="publications" /><summary type="html"><![CDATA[After minor corrections, my thesis dissertation was approved and is now live at the White Rose E-theses Repository. This completes a very eventful, challenging and rewarding 5 years since stepping out of my career as a school teacher to pursue a long-held ambition to learn more and engage in cutting edge research. I am very grateful to my supervisors for all their help and to my family for all their support.]]></summary></entry><entry><title type="html">Teaching on AI Course</title><link href="http://localhost:4000/posts/2024/02/teaching-aips/" rel="alternate" type="text/html" title="Teaching on AI Course" /><published>2024-02-14T00:00:00-08:00</published><updated>2024-02-14T00:00:00-08:00</updated><id>http://localhost:4000/posts/2024/02/teaching-aips</id><content type="html" xml:base="http://localhost:4000/posts/2024/02/teaching-aips/"><![CDATA[<p><img src="/images/thumb-aips.png" style="float:right; padding: 1ex;" />I’m
+getting the chance to be back at the front of a class!  I’ve been employed as a
+part-time lecturer, in order to teach part of a Masters level course on <em>AI:
+Problem Solving with Search</em> here at the University of York.  I will be
+co-teaching with the module leader, and it involves everything from writing
+lectures, labs and quizzes to setting, marking and moderating the exams.</p>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><category term="publications" /><summary type="html"><![CDATA[I’m getting the chance to be back at the front of a class! I’ve been employed as a part-time lecturer, in order to teach part of a Masters level course on AI: Problem Solving with Search here at the University of York. I will be co-teaching with the module leader, and it involves everything from writing lectures, labs and quizzes to setting, marking and moderating the exams.]]></summary></entry><entry><title type="html">First First-author Journal Article</title><link href="http://localhost:4000/posts/2023/11/first-jrn-art/" rel="alternate" type="text/html" title="First First-author Journal Article" /><published>2023-11-02T00:00:00-07:00</published><updated>2023-11-02T00:00:00-07:00</updated><id>http://localhost:4000/posts/2023/11/first-jrn-art</id><content type="html" xml:base="http://localhost:4000/posts/2023/11/first-jrn-art/"><![CDATA[<p><img src="/images/thumb-cons-jnl.png" style="float:right; padding: 1ex;" />Our
+paper <a href="https://doi.org/10.1007/s10601-023-09364-1">Learning to select SAT Encodings for pseudo-Boolean and linear integer
+constraints</a> has now been published
+in the Constraints journal.  This paper was an extended version of the work
+presented at CP2022, with more encodings, more analysis and the first detailed
+description of Savile Row’s Tree SAT encoding.</p>
+
+<p>The expanded results, models and code are now at
+<a href="https://github.com/felixvuo/lease-data">https://github.com/felixvuo/lease-data</a></p>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><category term="publications" /><summary type="html"><![CDATA[Our paper Learning to select SAT Encodings for pseudo-Boolean and linear integer constraints has now been published in the Constraints journal. This paper was an extended version of the work presented at CP2022, with more encodings, more analysis and the first detailed description of Savile Row’s Tree SAT encoding.]]></summary></entry><entry><title type="html">PhD Thesis Submitted</title><link href="http://localhost:4000/posts/2023/09/thesis-submitted/" rel="alternate" type="text/html" title="PhD Thesis Submitted" /><published>2023-09-29T00:00:00-07:00</published><updated>2023-09-29T00:00:00-07:00</updated><id>http://localhost:4000/posts/2023/09/thesis-submitted</id><content type="html" xml:base="http://localhost:4000/posts/2023/09/thesis-submitted/"><![CDATA[<p>Four eventful years after stepping out of school as a teacher back into
+university as a student I submitted by PhD Thesis on the topic of <em>Learning SAT
+Encodings for Constraint Satisfaction Problems</em>.  What a relief!  I’m looking
+forward to picking up some of the research projects which were on hold while the
+write-up was completed.  And of course awaiting the viva!</p>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><category term="phd" /><summary type="html"><![CDATA[Four eventful years after stepping out of school as a teacher back into university as a student I submitted by PhD Thesis on the topic of Learning SAT Encodings for Constraint Satisfaction Problems. What a relief! I’m looking forward to picking up some of the research projects which were on hold while the write-up was completed. And of course awaiting the viva!]]></summary></entry><entry><title type="html">GTA of the Year Award</title><link href="http://localhost:4000/posts/2021/06/gta-oty/" rel="alternate" type="text/html" title="GTA of the Year Award" /><published>2021-06-25T00:00:00-07:00</published><updated>2021-06-25T00:00:00-07:00</updated><id>http://localhost:4000/posts/2021/06/gtaoty</id><content type="html" xml:base="http://localhost:4000/posts/2021/06/gta-oty/"><![CDATA[<p><img src="/images/thumb-gta-award.png" style="float:right;padding:1ex;" />I was
+very honoured to receive the “Graduate Teaching Assistant of the Year” award
+after “GTA-ing” in a number of contexts, both in-person and remotely during the
+pandemic.</p>
+
+<p>Using my experience as a high-school maths teacher, I worked one-to-one (over
+Zoom) with a few year 1 undergraduate students who had missed maths teaching due
+to the pandemic, and needed a bit of help with some of the mathematical aspects
+of the year 1 theory courses.  I also led some lab sessions remotely for a Data
+Science module.  In these sessions I helped students reflect on their attempts
+to apply various data manipulation and analysis techniques to a variety of
+scenarios.</p>
+
+<p><a href="https://twitter.com/UoY_CS/status/1408441043838775301">Here was the Twitter post confirming the
+announcement</a></p>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><category term="teaching" /><summary type="html"><![CDATA[I was very honoured to receive the “Graduate Teaching Assistant of the Year” award after “GTA-ing” in a number of contexts, both in-person and remotely during the pandemic.]]></summary></entry><entry><title type="html">The Bookshelves Problem</title><link href="http://localhost:4000/posts/2021/06/gta-oty/" rel="alternate" type="text/html" title="The Bookshelves Problem" /><published>2021-06-25T00:00:00-07:00</published><updated>2021-06-25T00:00:00-07:00</updated><id>http://localhost:4000/posts/2021/06/bookshelves</id><content type="html" xml:base="http://localhost:4000/posts/2021/06/gta-oty/"><![CDATA[<p><img src="/images/thumb-shelves.png" style="float:right;padding:1ex;" />It was
+good fun to submit an optimisation problem to the <a href="https://csplib.org">CSPLib</a>
+web site.  This was a real-life problem (or opportunity?) to use some discarded
+planks of wood to build a set of bookshelves.  The idea was to create some
+bookshelves which would accommodate books of a mininum height and would maximise
+the shelf space given the collection of planks I was left with.</p>
+
+<p>It started with <a href="https://twitter.com/FelixVuo/status/1343913107966603264">this
+tweet</a>.  The full
+problem specification, and model files are available in the <a href="https://www.csplib.org/Problems/prob085/">CSPLib
+entry</a>.</p>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="constraints" /><category term="problem solving" /><summary type="html"><![CDATA[It was good fun to submit an optimisation problem to the CSPLib web site. This was a real-life problem (or opportunity?) to use some discarded planks of wood to build a set of bookshelves. The idea was to create some bookshelves which would accommodate books of a mininum height and would maximise the shelf space given the collection of planks I was left with.]]></summary></entry><entry><title type="html">YPAD leading to Associate Fellowship of the HEA</title><link href="http://localhost:4000/posts/2021/10/ypad-hea/" rel="alternate" type="text/html" title="YPAD leading to Associate Fellowship of the HEA" /><published>2021-06-25T00:00:00-07:00</published><updated>2021-06-25T00:00:00-07:00</updated><id>http://localhost:4000/posts/2021/10/hea</id><content type="html" xml:base="http://localhost:4000/posts/2021/10/ypad-hea/"><![CDATA[<p><img src="/images/thumb-heacert.png" style="float:right;padding:1ex;" />After
+completing the <a href="https://www.york.ac.uk/staff/teaching/develop/ypad/">York Professional and Academic Development scheme
+(YPAD)</a> and submitting a
+report of my teaching-related experience I was awarded Associate Fellowship of
+the Higher Education Academy.  As part of my report I carried out a brief
+investigation into using summative assessment results to inform teaching and
+assessment in the next cohort.  Per-question breakdown of the marks allows some
+rudimentary statistical analysis which can shed light on how questions could be
+improved or which concepts and skills might be particularly difficult for
+students.</p>]]></content><author><name>Felix Ulrich-Oltean</name><uri>https://www.cs.york.ac.uk/people/felix</uri></author><category term="career" /><category term="teaching" /><summary type="html"><![CDATA[After completing the York Professional and Academic Development scheme (YPAD) and submitting a report of my teaching-related experience I was awarded Associate Fellowship of the Higher Education Academy. As part of my report I carried out a brief investigation into using summative assessment results to inform teaching and assessment in the next cohort. Per-question breakdown of the marks allows some rudimentary statistical analysis which can shed light on how questions could be improved or which concepts and skills might be particularly difficult for students.]]></summary></entry></feed>
