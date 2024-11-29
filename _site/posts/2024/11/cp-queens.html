@@ -1,0 +1,748 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Fun with LinkedIn Queens and Constraints - Felix Ulrich-Oltean</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-GB">
+<meta property="og:site_name" content="Felix Ulrich-Oltean">
+<meta property="og:title" content="Fun with LinkedIn Queens and Constraints">
+
+
+  <link rel="canonical" href="http://localhost:4000/posts/2024/11/cp-queens">
+  <meta property="og:url" content="http://localhost:4000/posts/2024/11/cp-queens">
+
+
+
+  <meta property="og:description" content="I’ve enjoyed solving theLinkedIn Queens puzzle most mornings since they introducedit earlier this year.  The problem requires the player to place the queens on a board according to avery brief set of constraints (or rules).  For a bit of fun, I wanted to solve the puzzleautomatically (or as close as possible) using constraint programming.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2024-11-30T00:00:00-08:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Felix Ulrich-Oltean",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Felix Ulrich-Oltean Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<link rel="icon" type="image/x-icon" href="http://localhost:4000/images/favicon.ico?v=M44lzPylqQ" sizes="16x16">
+
+<link rel="manifest" href="http://localhost:4000/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="http://localhost:4000/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="http://localhost:4000/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="http://localhost:4000/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Felix Ulrich-Oltean</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/publications/">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/teaching/">Teaching</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Blog Posts</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/cs-mugshot.jpg" class="author__avatar" alt="Felix Ulrich-Oltean">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Felix Ulrich-Oltean</h3>
+    
+    <p class="author__bio">Researcher in Artificial Intelligence with extensive teaching experience</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      <!-- Font Awesome icons / Biographic information  -->
+      
+      
+        <li class="author__desktop"><i class="fa fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>University of York, UK</li>
+      
+      
+        <li><a href="https://www.cs.york.ac.uk/people/felix"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>Home Page</a></li>
+      
+      
+
+      <!-- Font Awesome and Academicons icons / Academic websites -->
+      
+        <li><a href="https://arxiv.org/search/cs?searchtype=author&query=Ulrich-Oltean,+F"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
+            
+      
+        <li><a href="https://scholar.google.com/citations?user=SBu1hARVRhcC"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+      
+      
+      
+        <li><a href="https://orcid.org/0000-0001-5162-5826"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+      
+                              
+      
+
+      <!-- Font Awesome icons / Repositories and software development -->
+      
+            
+            
+      
+        <li><a href="https://github.com/felixvuo"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
+      
+            
+            
+
+      <!-- Font Awesome icons / Social media -->
+      
+      
+            
+      
+                  
+                  
+      
+            
+            
+      
+        <li><a href="https://www.linkedin.com/in/felix-ulrich-oltean"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
+            
+      
+            
+                  
+            
+      
+            
+            
+      
+        <li><a href="https://twitter.com/FelixVuo"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>(formerly Twitter)</a></li>
+      
+              
+      
+                      
+      
+      
+            
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Fun with LinkedIn Queens and Constraints">
+    <meta itemprop="description" content="I’ve enjoyed solving theLinkedIn Queens puzzle most mornings since they introducedit earlier this year.  The problem requires the player to place the queens on a board according to avery brief set of constraints (or rules).  For a bit of fun, I wanted to solve the puzzleautomatically (or as close as possible) using constraint programming.">
+    <meta itemprop="datePublished" content="November 30, 2024">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Fun with LinkedIn Queens and Constraints
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  5 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-11-30T00:00:00-08:00">November 30, 2024</time></p>
+            
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p><img src="/images/thumb-li-queens.png" style="float:right; padding:1ex;" />I’ve enjoyed solving the
+<a href="https://www.linkedin.com/games/queens/">LinkedIn Queens</a> puzzle most mornings since they introduced
+it earlier this year.  The problem requires the player to place the queens on a board according to a
+very brief set of constraints (or <em>rules</em>).  For a bit of fun, I wanted to solve the puzzle
+automatically (or as close as possible) using constraint programming.</p>
+
+<p>Here’s a very rough screencast of the resulting program, which takes a screenshot of the board,
+figures out the colours in order to formulate a constraint satisfaction problem (CSP), then solves
+it:</p>
+
+<video controls="true" style="max-width:100%; margin: 0 auto;">
+  <source src="/images/li-queens-demo.mp4" type="video/mp4" />
+</video>
+
+<h2 id="how-does-it-work">How Does it Work?</h2>
+<p>Let’s look at this backwards.  Once we have a particular problem definition, it’s really simple to
+solve it using a constraint solver.  The problem can be defined in a constraint modelling language.</p>
+
+<h3 id="modelling-the-problem">Modelling the Problem</h3>
+<p>There are many ways to describe (or model) this problem.  The problem states that <em>n</em> queens should
+be placed on an <em>n</em> by <em>n</em> board so that no two queens are in the same row, column, or are
+immediately adjacent diagonally.  Here’s a constraint model written in Essence Prime:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ how big is the board?
+given n : int
+
+$ define the domain of the decision variables
+letting N be domain int(1..n)
+
+$ what is the colour of each square?
+given board : matrix indexed by [N,N] of int(0..n-1)
+
+$ in the solution queens are represented by a column id per row
+find q : matrix indexed by [N] of N
+
+$ now we define our constraints
+such that
+
+$ each queen has to be in a separate column
+alldifferent(q),
+
+$ can't be diagonally adjacent
+forall r : int(1..n-1) . |q[r] - q[r+1]| &gt; 1,
+
+$ one queen per colour
+forall r1 : int(1..n-1) .
+  forall r2 : int(r1+1..n) .
+    board[r1,q[r1]] != board[r2,q[r2]]
+</code></pre></div></div>
+
+<p>The model above describes the entire class of LI Queens puzzles.  In order to solve one particular
+instance, we need to supply the parameters.  Here’s an Essence Prime parameter file for the board
+shown at the top of the post - each colour is represented by a different number (0-10 for 11
+colours).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>letting n = 11
+letting board=[
+[6,  6,  6,  6,  6,  6,  5,  5,  5,  5,  5], 
+[6, 10, 10, 10, 10, 10, 10, 10,  5, 10, 10], 
+[6,  6,  6, 10,  0,  0,  0, 10,  5, 10,  3], 
+[6, 10, 10, 10,  0, 10,  4, 10, 10, 10,  3], 
+[2, 10,  0,  0,  0, 10,  4,  4,  3,  3,  3], 
+[2, 10, 10, 10, 10, 10, 10, 10,  3, 10,  3], 
+[2,  2,  2,  8,  8, 10,  9,  9,  9, 10,  3], 
+[2, 10,  2, 10,  8, 10, 10, 10,  9, 10,  3],  
+[2, 10,  2, 10,  8, 10,  7, 10,  9, 10,  1], 
+[2, 10, 10, 10, 10, 10,  7, 10, 10, 10,  1], 
+[2, 10,  7,  7,  7,  7,  7,  1,  1,  1,  1]
+]
+</code></pre></div></div>
+
+<p>Solving the problem is as simple as running a constraint solver, such as Savile Row, with the model
+and parameter files:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>savilerow -run-solver li-queens.eprime board.param
+</code></pre></div></div>
+<p>We get a solution file which contains the assignment of a queen’s column for each row:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>letting q be [8, 1, 5, 7, 10, 2, 4, 9, 3, 11, 6]
+</code></pre></div></div>
+
+<h3 id="extracting-the-problem-from-a-screenshot">Extracting the Problem from a Screenshot</h3>
+
+<p>In order to define a game board, we essentially need to work out the dimensions of the board and the
+colour of each cell.  There are many ways to try to do this (some interesting ML approaches will
+exist), but I came up with the following method, given in python-ish pseudocode below, which tries
+to figure out the actual colours used in the puzzle, and hence the size of the board (each queen
+occupies a different colour zone, so the number of colours equals the width of the board).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">learnPalette</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">n_starts</span><span class="p">,</span> <span class="n">n_neighb</span><span class="p">,</span> <span class="n">dist_neighb</span><span class="p">,</span> <span class="n">same_col_threshold</span><span class="p">):</span>
+    <span class="s">"""Find the unique game colours from an image of a board"""</span>
+    <span class="n">keep</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_starts</span><span class="p">):</span>
+        <span class="n">homepix</span> <span class="o">=</span> <span class="n">select_random_starting_pixel</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="n">homecol</span> <span class="o">=</span> <span class="n">colour_at</span><span class="p">(</span><span class="n">homepix</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">close_to_black_or_white</span><span class="p">(</span><span class="n">homecol</span><span class="p">):</span> <span class="c1"># this is either a gridline or the white border
+</span>            <span class="k">continue</span> <span class="c1"># to next iteration, choosing a different starting pixel
+</span>        <span class="n">good</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_neighb</span><span class="p">):</span>
+            <span class="n">newpix</span> <span class="o">=</span> <span class="n">select_random_neighbour</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">homepix</span><span class="p">,</span> <span class="n">dist_neighb</span><span class="p">)</span>
+            <span class="n">newcol</span> <span class="o">=</span> <span class="n">colour_at</span><span class="p">(</span><span class="n">newpix</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">newcol</span> <span class="o">!=</span> <span class="n">homecol</span><span class="p">:</span>
+                <span class="n">good</span> <span class="o">=</span> <span class="bp">False</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">good</span><span class="p">:</span> <span class="c1"># all neighbours had the same colour
+</span>            <span class="n">keep</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">homecol</span><span class="p">)</span>
+    <span class="c1"># mark as a duplicate any colour which is close enough to another colour
+</span>    <span class="n">dupes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">col_a</span><span class="p">,</span> <span class="n">col_b</span><span class="p">)</span> <span class="ow">in</span> <span class="n">keep</span><span class="p">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nearly_same</span><span class="p">(</span><span class="n">col_a</span><span class="p">,</span> <span class="n">col_b</span><span class="p">,</span> <span class="n">same_col_threshold</span><span class="p">):</span>
+            <span class="n">dupes</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">col_b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">keep</span> <span class="o">-</span> <span class="n">dupes</span>
+</code></pre></div></div>
+
+<p>And that’s it.  If you want the full details I have the complete code <a href="https://github.com/felixvuo/li-queens">in
+github</a> - the repository has both the essence prime files and
+an implementation which uses <a href="https://developers.google.com/optimization">Google’s OR-tools</a> because
+the latter is easier to install into a python notebook, although the modelling is less
+reader-friendly.</p>
+
+<h2 id="why-this-post">Why this post?</h2>
+<p>I believe that constraint programming and related search and optimisation techniques are an untapped
+tool that many organisations are unaware of.  The big players use them all over the place, e.g. in
+working out your best route on a map app, or working out compatible dependencies in a software
+package manager.</p>
+
+<p>For more information, check out:</p>
+<ul>
+  <li><a href="https://www.csplib.org/">CSP Lib</a>, a library of constraint satisfaction and optimisation problems
+from a variety of fields</li>
+  <li><a href="https://www.coursera.org/learn/discrete-optimization/">Coursera Course on Discrete Optimisation</a>,
+an excellent introduction to various optimisation approaches, including constraint programming,
+local search and mixed integer linear programming</li>
+  <li><a href="https://developers.google.com/optimization">OR-tools</a>, Google’s suite of optimisation solutions.</li>
+</ul>
+
+
+        
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#constraint-programming" class="page__taxonomy-item" rel="tag">constraint programming</a>
+    
+    </span>
+  </p>
+
+
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/posts/2024/11/cp-queens" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/posts/2024/11/cp-queens" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/posts/2024/11/cp-queens" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/posts/2024/07/graduation/" class="pagination--pager" title="PhD Graduation Ceremony
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2024/07/graduation/" rel="permalink">PhD Graduation Ceremony
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-07-29T00:00:00-07:00">July 29, 2024</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p><img src="/images/thumb-grad-gown.png" style="float:right;padding:1ex;" />It
+was a wonderful occasion to reflect on and celebrate the PhD experience with
+colleagues at a very special graduation ceremony organised by the University of
+York.  Having missed my original BSc graduation back in 2000, it was great to
+finally wear the gown and receive the award on stage.  I will always be grateful
+to all those people who made it possible for me to enage in these years of
+study, training and research.</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2024/03/thesis-published/" rel="permalink">PhD Thesis Published
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-03-22T00:00:00-07:00">March 22, 2024</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p><img alt="front cover of PhD thesis" src="/images/thumb-thesis.png" style="float:right; padding:1ex;" />After minor corrections, my thesis
+dissertation was approved and is now live at the <a href="https://etheses.whiterose.ac.uk/34581/">White Rose E-theses
+Repository</a>.  This completes a very
+eventful, challenging and rewarding 5 years since stepping out of my career as a
+school teacher to pursue a long-held ambition to learn more and engage in
+cutting edge research.  I am very grateful to my supervisors for all their help
+and to my family for all their support.</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2024/02/teaching-aips/" rel="permalink">Teaching on AI Course
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-02-14T00:00:00-08:00">February 14, 2024</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p><img src="/images/thumb-aips.png" style="float:right; padding: 1ex;" />I’m
+getting the chance to be back at the front of a class!  I’ve been employed as a
+part-time lecturer, in order to teach part of a Masters level course on <em>AI:
+Problem Solving with Search</em> here at the University of York.  I will be
+co-teaching with the module leader, and it involves everything from writing
+lectures, labs and quizzes to setting, marking and moderating the exams.</p>
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2023/11/first-jrn-art/" rel="permalink">First First-author Journal Article
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2023-11-02T00:00:00-07:00">November 02, 2023</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p><img src="/images/thumb-cons-jnl.png" style="float:right; padding: 1ex;" />Our
+paper <a href="https://doi.org/10.1007/s10601-023-09364-1">Learning to select SAT Encodings for pseudo-Boolean and linear integer
+constraints</a> has now been published
+in the Constraints journal.  This paper was an extended version of the work
+presented at CP2022, with more encodings, more analysis and the first detailed
+description of Savile Row’s Tree SAT encoding.</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="http://github.com/felixvuo"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2024 Felix Ulrich-Oltean. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+
