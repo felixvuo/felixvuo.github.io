@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Felix Ulrich-Oltean: Researcher in Artificial Intelligence"
+title: "Researcher and Lecturer in Artificial Intelligence"
 author_profile: true
 redirect_from: 
   - /about/
@@ -21,21 +21,15 @@ Search]({{'/teaching/2025-sem2-aips' | relative_url}}), and previously at high
 school level teaching mathematics to students from the age of 11 up to 19,
 including A-level Maths and Further Maths.
 
-
-### Most Recent Publications
-
+### Most Recent Publications ( [see all ...]({{ '/publications/' | relative_url }}) )
 {% assign pubs = site.publications | sort: 'date' | reverse %}
 {% for pub in pubs limit:2 %}
 * [{{pub.title}}]({{ pub.url | relative_url }})
 {% endfor %}
 
-[See all featured publications]({{ '/publications/' | relative_url }})
-
-### Most Recent Posts
-
+### Most Recent Posts ( [see all ...]({{ '/year-archive/' | relative_url }}) )
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 {% for post in sorted_posts limit:2 %}
 * [{{post.title}}]({{ post.url | relative_url }})
 {% endfor %}
 
-[See all posts]({{ '/year-archive/' | relative_url }})

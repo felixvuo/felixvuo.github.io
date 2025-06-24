@@ -3,7 +3,7 @@ title: The Bookshelves Problem
 date: 2021-06-25
 permalink: /posts/2021/06/gta-oty/
 tags:
-  - constraints
+  - constraint programming
   - problem solving
 ---
 
