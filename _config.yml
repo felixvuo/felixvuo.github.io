@@ -29,10 +29,10 @@ author:
   arxiv            : "https://arxiv.org/search/cs?searchtype=author&query=Ulrich-Oltean,+F"
   googlescholar    : "https://scholar.google.com/citations?user=SBu1hARVRhcC"
   orcid            : "https://orcid.org/0000-0001-5162-5826"
-#  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Felix-Ulrich-Oltean"
 
-  github           : "felixvuo"
-  twitter          : "FelixVuo"
+#  github           : "felixvuo"
+#  twitter          : "FelixVuo"
   linkedin         : "felix-ulrich-oltean"
   # mastodon         : # URL
   # medium           : # URL
