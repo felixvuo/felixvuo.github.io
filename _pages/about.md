@@ -9,17 +9,17 @@ redirect_from:
 
 ## About Me
 
-I mostly work on applying machine learning to combinatorial optimisation,
-usually to constraint satisfaction problems.  My [PhD
-thesis](https://etheses.whiterose.ac.uk/id/eprint/34581/) from the University of
-York was completed on the topic of learning to select SAT encodings for linear
-constraints.
 
-I have extensive teaching experience, both at university level, most recently
-co-teaching a Masters-level module in [AI Problem Solving with
-Search]({{'/teaching/2025-sem2-aips' | relative_url}}), and previously at high
-school level teaching mathematics to students from the age of 11 up to 19,
-including A-level Maths and Further Maths.
+I have mostly worked in combining machine learning and constraint programming.  My [PhD
+thesis](https://etheses.whiterose.ac.uk/id/eprint/34581/) from the University of York was completed
+on the topic of learning to select SAT encodings for linear constraints.  More recently I have
+worked in robotics, using machine learning to select suitable motion planning algorithms with a
+focus on predictability and reliability.
+
+I have extensive teaching experience, both at university level, most recently co-teaching a
+Masters-level module in [AI Problem Solving with Search]({{'/teaching/2025-sem2-aips' |
+relative_url}}), and previously at high school level teaching mathematics to students from the age
+of 11 up to 19, including A-level Maths and Further Maths.
 
 ### Most Recent Posts ( [see all ...]({{ '/year-archive/' | relative_url }}) )
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
