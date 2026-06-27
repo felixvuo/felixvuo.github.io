@@ -21,15 +21,15 @@ Search]({{'/teaching/2025-sem2-aips' | relative_url}}), and previously at high
 school level teaching mathematics to students from the age of 11 up to 19,
 including A-level Maths and Further Maths.
 
-### Most Recent Publications ( [see all ...]({{ '/publications/' | relative_url }}) )
-{% assign pubs = site.publications | sort: 'date' | reverse %}
-{% for pub in pubs limit:2 %}
-* [{{pub.title}}]({{ pub.url | relative_url }})
-{% endfor %}
-
 ### Most Recent Posts ( [see all ...]({{ '/year-archive/' | relative_url }}) )
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_posts limit:2 %}
+{% for post in sorted_posts limit:3 %}
 * [{{post.title}}]({{ post.url | relative_url }})
+{% endfor %}
+
+### Most Recent Publications ( [see all ...]({{ '/publications/' | relative_url }}) )
+{% assign pubs = site.publications | sort: 'date' | reverse %}
+{% for pub in pubs limit:3 %}
+* [{{pub.title}}]({{ pub.url | relative_url }})
 {% endfor %}
 
