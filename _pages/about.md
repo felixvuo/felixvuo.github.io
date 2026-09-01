@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Researcher and Lecturer in Artificial Intelligence"
+title: "Researcher and Educator in AI, Robotics and Real-time Systems"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,7 +8,6 @@ redirect_from:
 ---
 
 ## About Me
-
 
 I have mostly worked in combining machine learning and constraint programming.  My [PhD
 thesis](https://etheses.whiterose.ac.uk/id/eprint/34581/) from the University of York was completed

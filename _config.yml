@@ -11,7 +11,7 @@ locale                   : "en-GB"
 title                    : "Felix Ulrich-Oltean"
 title_separator          : "-"
 name                     : &name "Felix Ulrich-Oltean"
-description              : &description "AI Research & Education"
+description              : &description "Researcher and Educator in AI, Robotics and Real-time Systems"
 # url                      : https://felixvuo.github.io
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -21,7 +21,7 @@ author:
   # Biographic information
   avatar           : "cs-mugshot.jpg"
   name             : "Felix Ulrich-Oltean"
-  bio              : "Researcher in Artificial Intelligence with extensive teaching experience"
+  bio              : "Researcher in AI, Robotics and Real-time Systems with extensive teaching experience"
   employer         : "University of York, UK"
   uri              : "https://www.cs.york.ac.uk/people/felix"
 
